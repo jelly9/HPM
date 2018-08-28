@@ -1,6 +1,6 @@
 
 # jellyxiao 
-# jellyxio@qq.com
+# jellyxio@qq.com (邮箱不是笔误,就是 jellyxio)
 # 2018-07-19
 
 # High Performance Module   
