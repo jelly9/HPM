@@ -10,7 +10,6 @@
 #define NAME_SIZE       32
 #define PATH_SIZE       128
 
-
 /* 返回码 */
 enum RETURN{
     FAILED = -1,
@@ -35,7 +34,7 @@ typedef struct instance{
     int proc_num;
     int proc_idx;
 
-    /* 进程池头结点 */
+    /* 进程池数组 */
     process_t *proc;
 }instance_t;
 
