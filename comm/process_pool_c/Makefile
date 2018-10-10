@@ -1,4 +1,4 @@
-ROOTPATH=/home/ubuntu/HPM
+ROOTPATH=/home/jellyxiao/HPM
 LOG_INCLUDE=$(ROOTPATH)/comm/log
 
 tools:process_pool.c

@@ -6,9 +6,14 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <errno.h>
+
+#include "ilog.h"
 
 #define NAME_SIZE       32
 #define PATH_SIZE       128
+
+static size_t g_enable;
 
 /* 返回码 */
 enum RETURN{
@@ -21,7 +26,7 @@ typedef struct process{
     char name[NAME_SIZE];
     pid_t pid;
     int pipefd[2];
-    size_t score;
+    int score;
 }process_t;
 
 /* 进程池 */
@@ -33,6 +38,9 @@ typedef struct instance{
 
     int proc_num;
     int proc_idx;
+
+    int (*handler)( struct instance* );
+    //void* (*handler)( void* );
 
     /* 进程池数组 */
     process_t *proc;
